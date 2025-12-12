@@ -23,7 +23,7 @@ function CreateCategory() {
                 
                 try {
           
-           const response=await axios.post('http://localhost:5001/api/categorys/add',{
+           const response=await axios.post('/api/categorys/add',{
             name
         });
         if(response.status===201)

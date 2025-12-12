@@ -36,7 +36,7 @@ const TakeExam = () => {
 
   const fetchExams = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/exams");
+      const response = await axios.get("/api/exams");
       setExams(response.data);
       setError(null);
     } catch (err) {
@@ -81,7 +81,7 @@ const TakeExam = () => {
 
   const submitExam = async () => {
     try {
-      await axios.post("http://localhost:5001/api/exams/submit", {
+      await axios.post("/api/exams/submit", {
         examId: selectedExam._id,
         score: score,
         totalQuestions: selectedExam.questions.length,

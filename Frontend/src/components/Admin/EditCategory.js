@@ -27,7 +27,7 @@ const navigate=useNavigate();
                 try {
     
           console.log("id"+id);
-           const response=await axios.put(`http://localhost:5001/api/categorys/${id}`,
+           const response=await axios.put(`/api/categorys/${id}`,
                     {
                       name
                     }

@@ -20,7 +20,7 @@ function Category() {
         localStorage.setItem("id", "");
         localStorage.setItem("Name", "");
         //const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-        const response = await axios("http://localhost:5001/api/categorys/list");
+        const response = await axios("/api/categorys/list");
         console.log(response.data.categories);
         setData(response.data.categories);
         console.log('A'+data);
@@ -58,7 +58,7 @@ function Category() {
             //handleShow();
             //setIsLoading(true);
     
-     const response=await axios.delete(`http://localhost:5001/api/categorys/${id}`)
+     const response=await axios.delete(`/api/categorys/${id}`)
           //const responseData=await response.json();
           console.log(response);
            //setIsLoading(false);
